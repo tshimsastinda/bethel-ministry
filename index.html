@@ -116,6 +116,17 @@ document.querySelectorAll("#barre-onglets a").forEach(function(a){if(a.getAttrib
     
     <!-- Bouton Menu Burger (3 traits) -->
     <button onclick="toggleMenuMobile()" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0;">
+<nav>
+  <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 65px; padding: 0 15px;">
+    
+    <!-- Logo et Nom du Ministère -->
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="logo" alt="Logo Bethel" style="height: 38px; width: 38px; object-fit: contain; border-radius: 50%;">
+      <span style="font-family: var(--serif); color: var(--gold); font-size: 0.95rem; font-weight: bold; line-height: 1.2;">BETHEL MINISTRY INTERNATIONAL</span>
+    </div>
+    
+    <!-- Bouton Menu Burger (3 traits) -->
+    <button onclick="toggleMenuMobile()" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0;">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
   </div>
@@ -133,6 +144,18 @@ document.querySelectorAll("#barre-onglets a").forEach(function(a){if(a.getAttrib
     </div>
   </div>
 </nav>
+
+<script>
+function toggleMenuMobile() {
+  var p = document.getElementById('panneau-menu-haut');
+  if (p.style.display === 'none' || p.style.display === '') {
+    p.style.display = 'block';
+  } else {
+    p.style.display = 'none';
+  }
+}
+</script>
+      
 
 <script>
 function toggleMenuMobile() {
