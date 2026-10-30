@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Prophète Tshims Astinda | BETHEL MINISTRY International</title>
+<title>Prophète Tshims Astinda | BETHEL MINISTRY INTERNATIONAL</title>
 <meta name="description" content="Prédication, enseignement biblique, formation et accompagnement spirituel. La Parole. La Foi. La Transformation.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap">
 <style>
@@ -72,33 +72,35 @@ footer b{font-family:var(--serif);color:var(--ivory);font-size:1.1rem}
 <body>
 
   <!-- NOUVEL EN-TÊTE PROPRE AVEC LOGO ET TITRE COMPLET -->
-  <nav>
-    <div class="wrap">
-      <!-- Logo et Titre -->
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <img src="logo.jpg" alt="Logo Bethel" style="height: 38px; width: 38px; object-fit: contain; border-radius: 50%;">
-        <span style="font-family: var(--serif); color: var(--gold); font-size: 0.95rem; font-weight: bold; line-height: 1.2;">BETHEL MINISTRY INTERNATIONAL</span>
-      </div>
-      
-      <!-- Bouton Menu Burger -->
-      <button onclick="toggleMenuMobile()" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </button>
-    </div>
 
-    <!-- Panneau Déroulant du Menu -->
-    <div id="panneau-menu-haut" style="display: none; background: var(--navy); border-bottom: 1px solid var(--line); padding: 15px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-      <div style="display: flex; flex-direction: column; gap: 12px;">
-        <a href="index.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">🏠 Accueil</a>
-        <a href="publications.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">📖 Publications</a>
-        <a href="formations.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">🎓 Formations</a>
-        <a href="bibliotheque.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">📚 Bibliothèque</a>
-        <a href="paiements.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">💳 Paiements</a>
-        <a href="don.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">🤝 Faire un don</a>
-        <a href="contact.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">📩 Contact</a>
-      </div>
+<nav>
+  <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 65px; padding: 0 15px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="logo.jpg" alt="Logo Bethel" style="height: 38px; width: 38px; object-fit: contain; border-radius: 50%;">
+      <span style="font-family: var(--serif); color: var(--gold); font-size: 0.95rem; font-weight: bold; line-height: 1.2;">BETHEL MINISTRY INTERNATIONAL</span>
     </div>
-  </nav>
+    <button onclick="toggleMenuMobile()" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </div>
+  <div id="panneau-menu-haut" style="display: none; background: var(--navy); border-bottom: 1px solid var(--line); padding: 15px 20px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a href="index.html" style="color: var(--ivory); text-decoration: none;">🏠 Accueil</a>
+      <a href="publications.html" style="color: var(--ivory); text-decoration: none;">📖 Publications</a>
+      <a href="formations.html" style="color: var(--ivory); text-decoration: none;">🎓 Formations</a>
+      <a href="bibliotheque.html" style="color: var(--ivory); text-decoration: none;">📚 Bibliothèque</a>
+      <a href="paiements.html" style="color: var(--ivory); text-decoration: none;">💳 Paiements</a>
+      <a href="don.html" style="color: var(--ivory); text-decoration: none;">🤝 Faire un don</a>
+      <a href="contact.html" style="color: var(--ivory); text-decoration: none;">📩 Contact</a>
+    </div>
+  </div>
+</nav>
+<script>
+function toggleMenuMobile() {
+  var p = document.getElementById('panneau-menu-haut');
+  p.style.display = (p.style.display === 'block') ? 'none' : 'block';
+}
+</script>
 
   <!-- SECTION D'ACCUEIL AVEC TA PHOTO ET TON TEXTE -->
   <section class="hero" id="accueil">
@@ -112,7 +114,8 @@ footer b{font-family:var(--serif);color:var(--ivory);font-size:1.1rem}
           <a class="btn ghost" href="#accompagnement">Demander un accompagnement</a>
         </div>
       </div>
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAVrAoADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEK revenue..." alt="Prophète Tshims Astinda">
+      <img src="profil 1.jpg" alt="Prophète Tshims Astinda">
+        
     </div>
   </section>
 
@@ -155,6 +158,9 @@ footer b{font-family:var(--serif);color:var(--ivory);font-size:1.1rem}
     if(a.getAttribute("data-p") === f){ a.className = "actif"; }
   });
   </script>
-
+<img src="couverture avant.jpg" alt="Comment bâtir un esprit fort pour accomplir sa destinée divine">
+  <img src="couverture arrière.jpg"
+  alt="Comment bâtir un esprit fort pour accomplir sa destinée divine">
+  
 </body>
 </html>
