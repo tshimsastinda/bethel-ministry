@@ -106,22 +106,43 @@ var f=location.pathname.split("/").pop()||"index.html";
 document.querySelectorAll("#barre-onglets a").forEach(function(a){if(a.getAttribute("data-p")===f){a.className="actif";}});
 </script>
 <nav>
-  <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 60px; overflow-x: auto; white-space: nowrap; scrollbar-width: none;">
-    <b style="font-family: var(--serif); color: var(--gold); font-size: 1.1rem; margin-right: 15px;">BETHEL MINISTRY</b>
-    <div class="links" style="display: flex; gap: 16px; align-items: center; font-size: 0.92rem;">
-      <a href="index.html">Accueil</a>
-      <a href="publications.html">Publications</a>
-      <a href="formations.html">Formations</a>
-      <a href="bibliotheque.html">Bibliothèque</a>
-      <a href="paiements.html">Paiements</a>
-      <a href="don.html">Faire un don</a>
-      <a href="contact.html">Contact</a>
+  <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 60px; padding: 0 15px;">
+    <b style="font-family: var(--serif); color: var(--gold); font-size: 1.1rem;">BETHEL MINISTRY</b>
+    
+    <!-- Bouton Menu Burger (3 traits) -->
+    <button onclick="toggleMenuMobile()" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </div>
+
+  <!-- Panneau déroulant du menu -->
+  <div id="panneau-menu-haut" style="display: none; background: var(--navy); border-bottom: 1px solid var(--line); padding: 15px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a href="index.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">🏠 Accueil</a>
+      <a href="publications.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">📖 Publications</a>
+      <a href="formations.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">🎓 Formations</a>
+      <a href="bibliotheque.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">📚 Bibliothèque</a>
+      <a href="paiements.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">💳 Paiements</a>
+      <a href="don.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">🤝 Faire un don</a>
+      <a href="contact.html" style="color: var(--ivory); text-decoration: none; font-size: 1rem; padding: 4px 0;">📩 Contact</a>
     </div>
   </div>
 </nav>
+
+<script>
+function toggleMenuMobile() {
+  var p = document.getElementById('panneau-menu-haut');
+  if (p.style.display === 'none' || p.style.display === '') {
+    p.style.display = 'block';
+  } else {
+    p.style.display = 'none';
+  }
+}
+</script>
 <div style="background:var(--navy);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:center;gap:6px 20px;padding:10px 14px;font-size:.95rem"><a href="publications.html" style="color:var(--gold);text-decoration:none">Publications</a><a href="formations.html" style="color:var(--gold);text-decoration:none">Formations</a><a href="bibliotheque.html" style="color:var(--gold);text-decoration:none">Bibliothèque</a><a href="don.html" style="color:var(--gold);text-decoration:none">Faire un don</a><a href="contact.html" style="color:var(--gold);text-decoration:none">Contact</a></div>
 <section class="hero" id="accueil"><div class="wrap">
 <div>
+
 <h1>Prophète <span>Tshims Astinda</span></h1>
 <p class="sub">Prédication, enseignement biblique, formation et accompagnement spirituel</p>
 <blockquote>Équiper une génération par la Parole de Dieu, fortifier les croyants dans la foi et les aider à vivre pleinement leur destinée en Christ.</blockquote>
