@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | BETHEL MINISTRY International</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--fond:#0d0d10;--carte:#17171c;--or:#d4af37;--texte:#ecebe6;--doux:#a9a8a2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--texte);font-family:'Figtree',sans-serif;line-height:1.6}
+header{padding:16px 20px;border-bottom:1px solid #2a2a31;display:flex;justify-content:space-between;align-items:center}
+header a{color:var(--or);text-decoration:none;font-weight:600}
+main{max-width:640px;margin:0 auto;padding:24px 20px 60px}
+h1,h2{font-family:'Fraunces',serif;color:var(--or)}
+h1{font-size:2rem;margin-bottom:4px}
+.carte{background:var(--carte);border:1px solid #2a2a31;border-radius:14px;padding:20px;margin:20px 0}
+label{display:block;margin:12px 0 4px;color:var(--doux);font-size:.9rem}
+input,select,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #33333b;background:#0d0d10;color:var(--texte);font:inherit}
+button,.btn{display:inline-block;margin-top:16px;padding:13px 20px;background:var(--or);color:#111;border:0;border-radius:8px;font-weight:600;text-decoration:none;cursor:pointer}
+footer{text-align:center;color:var(--doux);font-size:.85rem;padding:20px}
+</style>
+</head>
+<body>
+<header><strong>BETHEL MINISTRY</strong><a href="index.html">← Accueil</a></header>
+<main>
+  <h1>Contact</h1>
+  <p>Une question, une demande de prière ou une invitation ? Écrivez-nous.</p>
+
+  <div class="carte">
+    <h2>Coordonnées</h2>
+    <p>WhatsApp : +260 764 550 485<br>
+    Email : tshilemoastinda@gmail.com<br>
+    <a style="color:var(--or)" href="https://www.facebook.com/proph.tshims.astinda.1">Facebook : Proph Tshims Astinda</a></p>
+    <a class="btn" href="https://wa.me/260764550485?text=Bonjour%20Proph%C3%A8te%2C%20j%27ai%20une%20question.">Écrire sur WhatsApp</a>
+  </div>
+
+  <div class="carte">
+    <h2>Demande de prière</h2>
+    <label>Votre nom</label><input id="p-nom">
+    <label>Sujet de prière</label><textarea id="p-sujet" rows="4"></textarea>
+    <label><input type="checkbox" id="p-conf" style="width:auto"> Traiter ma demande confidentiellement</label>
+    <button onclick="envoyerPriere()">Envoyer par WhatsApp</button>
+  </div>
+
+  <div class="carte">
+    <h2>Invitation</h2>
+    <label>Église / Organisation</label><input id="i-org">
+    <label>Pays / Ville</label><input id="i-ville">
+    <label>Date souhaitée</label><input id="i-date">
+    <label>Type d'événement</label>
+    <select id="i-type"><option>Prédication</option><option>Conférence</option><option>Séminaire</option><option>Formation</option><option>Autre</option></select>
+    <label>Détails</label><textarea id="i-details" rows="3"></textarea>
+    <button onclick="envoyerInvitation()">Envoyer l'invitation</button>
+  </div>
+</main>
+<footer>© 2026 BETHEL MINISTRY International<br>La Parole. La Foi. La Transformation.</footer>
+
+<script>
+var NUM="260764550485";
+function ouvrir(t){window.open("https://wa.me/"+NUM+"?text="+encodeURIComponent(t),"_blank");}
+function v(id){return document.getElementById(id).value;}
+function envoyerPriere(){
+  var conf=document.getElementById("p-conf").checked?"OUI (confidentiel)":"Non";
+  ouvrir("DEMANDE DE PRIÈRE\nNom : "+v("p-nom")+"\nSujet : "+v("p-sujet")+"\nConfidentialité : "+conf);
+}
+function envoyerInvitation(){
+  ouvrir("INVITATION\nOrganisation : "+v("i-org")+"\nVille : "+v("i-ville")+"\nDate : "+v("i-date")+"\nType : "+v("i-type")+"\nDétails : "+v("i-details"));
+}
+</script>
+</body>
+</html>
