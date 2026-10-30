@@ -63,6 +63,25 @@ footer b{font-family:var(--serif);color:var(--ivory);font-size:1.1rem}
 </style>
 </head>
 <body>
+  <style>
+#barre-onglets{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;background:#0b1228;border-top:1px solid #26304f;padding:8px 4px calc(8px + env(safe-area-inset-bottom))}
+#barre-onglets a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#9aa3bd;font:600 .72rem Figtree,sans-serif}
+#barre-onglets svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#barre-onglets a.actif{color:#f0b82d}
+@media(max-width:760px){body{padding-bottom:84px}}
+@media(min-width:761px){#barre-onglets{display:none}}
+</style>
+<div id="barre-onglets" role="navigation">
+<a href="index.html" data-p="index.html"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Accueil</span></a>
+<a href="formations.html" data-p="formations.html"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg><span>Formations</span></a>
+<a href="bibliotheque.html" data-p="bibliotheque.html"><svg viewBox="0 0 24 24"><path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3z"/><path d="M4 17a3 3 0 0 1 3-3h12"/></svg><span>Livre</span></a>
+<a href="don.html" data-p="don.html"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></svg><span>Don</span></a>
+<a href="contact.html" data-p="contact.html"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Contact</span></a>
+</div>
+<script>
+var f=location.pathname.split("/").pop()||"index.html";
+document.querySelectorAll("#barre-onglets a").forEach(function(a){if(a.getAttribute("data-p")===f){a.className="actif";}});
+</script>
 <nav><div class="wrap"><b>BETHEL MINISTRY</b><div class="links">
 <a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#ministere">Ministère</a><a href="#enseignements">Enseignements</a><a href="#formation">Formation</a><a href="#livre">Livre</a><a href="#priere">Prière</a><a href="#accompagnement">Accompagnement</a><a href="#invitation">Invitation</a><a href="#contact">Contact</a></div></div></nav>
 <div style="background:var(--navy);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:center;gap:6px 20px;padding:10px 14px;font-size:.95rem"><a href="publications.html" style="color:var(--gold);text-decoration:none">Publications</a><a href="formations.html" style="color:var(--gold);text-decoration:none">Formations</a><a href="bibliotheque.html" style="color:var(--gold);text-decoration:none">Bibliothèque</a><a href="don.html" style="color:var(--gold);text-decoration:none">Faire un don</a><a href="contact.html" style="color:var(--gold);text-decoration:none">Contact</a></div>
