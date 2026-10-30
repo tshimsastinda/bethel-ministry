@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faire un don | BETHEL MINISTRY International</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--fond:#0d0d10;--carte:#17171c;--or:#d4af37;--texte:#ecebe6;--doux:#a9a8a2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--texte);font-family:'Figtree',sans-serif;line-height:1.6}
+header{padding:16px 20px;border-bottom:1px solid #2a2a31;display:flex;justify-content:space-between;align-items:center}
+header a{color:var(--or);text-decoration:none;font-weight:600}
+main{max-width:640px;margin:0 auto;padding:24px 20px 60px}
+h1,h2{font-family:'Fraunces',serif;color:var(--or)}
+h1{font-size:2rem;margin-bottom:4px}
+.carte{background:var(--carte);border:1px solid #2a2a31;border-radius:14px;padding:20px;margin:20px 0}
+.verset{border-left:3px solid var(--or);padding-left:14px;color:var(--doux);font-style:italic}
+.btn{display:block;text-align:center;margin-top:16px;padding:14px 20px;background:var(--or);color:#111;border-radius:8px;font-weight:600;text-decoration:none}
+.btn.sec{background:transparent;color:var(--or);border:1px solid var(--or)}
+.petit{color:var(--doux);font-size:.85rem}
+footer{text-align:center;color:var(--doux);font-size:.85rem;padding:20px}
+</style>
+</head>
+<body>
+<header><strong>BETHEL MINISTRY</strong><a href="index.html">← Accueil</a></header>
+<main>
+  <h1>Soutenir le ministère</h1>
+  <p class="verset">« Que chacun donne comme il l'a décidé en son cœur, sans tristesse ni contrainte ; car Dieu aime celui qui donne avec joie. » — 2 Corinthiens 9:7</p>
+  <p>Votre contribution est entièrement volontaire. Elle soutient la prédication, l'enseignement, la formation et la production de ressources chrétiennes.</p>
+
+  <div class="carte">
+    <h2>Donner en ligne</h2>
+    <p>Payez par mobile money (Airtel, MTN, Zamtel) ou par carte, de façon sécurisée. Vous choisissez le montant.</p>
+    <a id="btn-don" class="btn" href="#" target="_blank" rel="noopener">Faire un don</a>
+    <p class="petit">Le paiement est traité par Flutterwave. Le ministère ne voit ni ne conserve vos informations bancaires.</p>
+  </div>
+
+  <div class="carte">
+    <h2>Une question sur les dons ?</h2>
+    <a class="btn sec" href="https://wa.me/260764550485?text=Bonjour%20Proph%C3%A8te%2C%20j%27ai%20une%20question%20sur%20les%20dons." target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+  </div>
+</main>
+<footer>© 2026 BETHEL MINISTRY International<br>La Parole. La Foi. La Transformation.</footer>
+
+<script>
+// Colle ton lien Flutterwave entre les guillemets ci-dessous :
+var LIEN_DON = "";
+var btn = document.getElementById("btn-don");
+if (LIEN_DON) {
+  btn.href = LIEN_DON;
+} else {
+  btn.href = "https://wa.me/260764550485?text=" + encodeURIComponent("Bonjour Prophète, je souhaite faire un don au ministère.");
+}
+</script>
+</body>
+</html>
