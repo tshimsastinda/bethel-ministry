@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formations | BETHEL MINISTRY International</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--fond:#0d0d10;--carte:#17171c;--or:#d4af37;--texte:#ecebe6;--doux:#a9a8a2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--texte);font-family:'Figtree',sans-serif;line-height:1.6}
+header{padding:16px 20px;border-bottom:1px solid #2a2a31;display:flex;justify-content:space-between;align-items:center}
+header a{color:var(--or);text-decoration:none;font-weight:600}
+main{max-width:640px;margin:0 auto;padding:24px 20px 60px}
+h1,h2{font-family:'Fraunces',serif;color:var(--or)}
+h1{font-size:2rem;margin-bottom:4px}
+h2{margin-top:0}
+.carte{background:var(--carte);border:1px solid #2a2a31;border-radius:14px;padding:20px;margin:20px 0}
+.carte ul{padding-left:20px;color:var(--doux)}
+.etiquette{display:inline-block;font-size:.8rem;color:var(--or);border:1px solid var(--or);border-radius:20px;padding:2px 10px;margin-bottom:8px}
+label{display:block;margin:12px 0 4px;color:var(--doux);font-size:.9rem}
+input,select{width:100%;padding:12px;border-radius:8px;border:1px solid #33333b;background:#0d0d10;color:var(--texte);font:inherit}
+button{display:block;width:100%;margin-top:16px;padding:14px;background:var(--or);color:#111;border:0;border-radius:8px;font-weight:600;font-size:1rem;cursor:pointer}
+.petit{color:var(--doux);font-size:.85rem}
+footer{text-align:center;color:var(--doux);font-size:.85rem;padding:20px}
+</style>
+</head>
+<body>
+<header><strong>BETHEL MINISTRY</strong><a href="index.html">← Accueil</a></header>
+<main>
+  <h1>Formations</h1>
+  <p>Des programmes pour comprendre la Parole de Dieu, grandir spirituellement et servir avec compétence.</p>
+
+  <div class="carte">
+    <span class="etiquette">30 leçons</span>
+    <h2>École du Prédicateur</h2>
+    <p>Pour les prédicateurs, enseignants bibliques, responsables et jeunes serviteurs.</p>
+    <ul>
+      <li>Comprendre votre appel</li>
+      <li>Étudier un texte biblique et appliquer les principes d'herméneutique</li>
+      <li>Construire une prédication : introduction, points, conclusion, appel</li>
+      <li>Améliorer votre communication et éviter les erreurs fréquentes</li>
+      <li>Bonus : éthique et caractère du prédicateur</li>
+    </ul>
+  </div>
+
+  <div class="carte">
+    <span class="etiquette">Individuel</span>
+    <h2>Accompagnement et coaching spirituel</h2>
+    <p>Un accompagnement personnel pour être écouté, orienté et soutenu dans la prière, selon les principes bibliques.</p>
+    <ul>
+      <li>Croissance spirituelle et vie de prière</li>
+      <li>Destinée et vocation</li>
+      <li>Leadership et service dans l'Église</li>
+      <li>Périodes de transition</li>
+    </ul>
+    <p class="petit">L'accompagnement spirituel ne remplace pas les services médicaux, psychologiques ou juridiques lorsque ceux-ci sont nécessaires.</p>
+  </div>
+
+  <div class="carte">
+    <span class="etiquette">Bientôt</span>
+    <h2>Leadership chrétien et cours bibliques</h2>
+    <p>Des cours sur le leadership, la foi, le Saint-Esprit et la vie spirituelle seront publiés progressivement.</p>
+  </div>
+
+  <div class="carte">
+    <h2>S'inscrire ou demander les tarifs</h2>
+    <label>Nom complet</label><input id="nom">
+    <label>Pays / Ville</label><input id="ville">
+    <label>Formation souhaitée</label>
+    <select id="formation">
+      <option>École du Prédicateur</option>
+      <option>Accompagnement / coaching</option>
+      <option>Leadership chrétien</option>
+      <option>Cours bibliques</option>
+    </select>
+    <button onclick="envoyer()">Envoyer ma demande par WhatsApp</button>
+    <p class="petit">Les tarifs ne sont pas affichés : ils vous seront communiqués par WhatsApp.</p>
+  </div>
+</main>
+<footer>© 2026 BETHEL MINISTRY International<br>La Parole. La Foi. La Transformation.</footer>
+
+<script>
+function envoyer(){
+  var t = "DEMANDE DE FORMATION\nNom : " + document.getElementById("nom").value +
+          "\nVille : " + document.getElementById("ville").value +
+          "\nFormation : " + document.getElementById("formation").value;
+  window.open("https://wa.me/260764550485?text=" + encodeURIComponent(t), "_blank");
+}
+</script>
+</body>
+</html>
