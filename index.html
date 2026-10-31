@@ -159,11 +159,53 @@ function toggleMenuMobile() {
       À travers la prédication, l'enseignement biblique approfondi, les formations pratiques et un accompagnement spirituel personnalisé, nous œuvrons pour bâtir des vies ancrées dans la vérité, prêtes à manifester la puissance et l'amour de Dieu dans leur quotidien.
     </p>
     
-    <!-- Bouton pour l'accompagnement -->
-    <a href="accompagnement" class="btn" style="display: inline-block; background-color: var(--gold); color: var(--navy); padding: 12px 25px; border-radius: 6px; font-weight: bold; text-decoration: none;">Demander un accompagnement</a><div style="margin-top: 20px; font-size: 0.95rem; line-height: 1.6;">
-  <p style="margin-bottom: 8px;">📲 **WhatsApp :** 
-    <a href="https://wa.me/243995484080" style="color: var(--gold); text-decoration: none;" target="_blank">+243 995 484 080</a> / 
-    <a href="https://wa.me/260764550485" style="color: var(--gold); text-decoration: none;" target="_blank">+260 764 550 485</a>
+    <div style="margin-top: 25px; text-align: center;">
+  <!-- Élément cliquable interactif (type accordéon/formulaire) -->
+  <details style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--gold); border-radius: 8px; padding: 15px; text-align: left;">
+    <summary style="cursor: pointer; font-weight: bold; color: var(--gold); text-align: center; font-size: 1.1rem; list-style: none;">
+      <span style="background: var(--gold); color: var(--bg); padding: 12px 25px; border-radius: 6px; display: inline-block; font-weight: bold;">Demander un accompagnement</span>
+    </summary>
+    
+    <div style="margin-top: 20px;">
+      <p style="color: var(--ivory); margin-bottom: 15px; font-size: 0.95rem; text-align: center;">Remplissez votre message ou choisissez votre canal d'envoi direct :</p>
+      
+      <!-- Formulaire rapide pour préparer le message -->
+      <div style="margin-bottom: 15px;">
+        <label style="color: var(--mute); font-size: 0.85rem; display: block; margin-bottom: 5px;">Votre message de demande :</label>
+        <textarea id="msgAccompagnement" placeholder="Écrivez votre sujet ou besoin d'accompagnement ici..." style="width: 100%; height: 80px; padding: 10px; border-radius: 6px; border: 1px solid var(--mute); background: rgba(0,0,0,0.3); color: var(--ivory); font-family: inherit; resize: vertical;"></textarea>
+      </div>
+
+      <!-- Boutons d'envoi direct WhatsApp et Email avec symboles -->
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+        <a href="javascript:void(0);" onclick="envoyerWhatsApp()" style="background: #25D366; color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem;">
+          💬 Envoyer via WhatsApp
+        </a>
+        <a href="javascript:void(0);" onclick="envoyerEmail()" style="background: var(--gold); color: var(--bg); padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem;">
+          ✉️ Envoyer par Email
+        </a>
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- Petit script JavaScript pour générer dynamiquement l'envoi avec le texte du message -->
+<script>
+  function envoyerWhatsApp() {
+    var texte = document.getElementById('msgAccompagnement').value;
+    var messageFinal = "Bonjour Prophète Tshims, je souhaite demander un accompagnement spirituel. " + (texte ? "Message : " + texte : "");
+    var url = "https://wa.me/243995484080?text=" + encodeURIComponent(messageFinal);
+    window.open(url, '_blank');
+  }
+
+  function envoyerEmail() {
+    var texte = document.getElementById('msgAccompagnement').value;
+    var sujet = encodeURIComponent("Demande d'accompagnement spirituel");
+    var corps = encodeURIComponent("Bonjour,\n\nJe souhaite demander un accompagnement.\n\nMessage :\n" + texte);
+    var url = "mailto:tshilemoastinda@gmail.com?subject=" + sujet + "&body=" + corps;
+    window.location.href = url;
+  }
+</script>
+href="https://wa.me/260764550485" style="color: var(--gold); text-decoration: none;" target="_blank">+260 764 550 485</a>
   </p>
   <p>📧 **Email :** 
     <a href="mailto:tshilemoastinda@gmail.com" style="color: var(--gold); text-decoration: none;">tshilemoastinda@gmail.com</a>
